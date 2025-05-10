@@ -31,7 +31,7 @@ This project is a task management module where you can:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/task-manager-app.git
+   git clone https://github.com/ktatianna/task-manager.git
    cd task-manager-app
    ```
 
@@ -60,10 +60,7 @@ This project is a task management module where you can:
   - Deleting tasks
   - Marking as completed
   - UI rendering and empty state
-- You can find screenshots in the `/evidence` folder (add your own here).
 - All tests pass successfully (`npm run test`).
-
-*** añadir captura
 
 ---
 
@@ -102,6 +99,9 @@ All files         |   98.46 |      100 |   96.29 |     100 |
 
 ### Empty State
 ![Empty State](./screenshots/emptyState.png)
+
+### Tests
+![Tests](./screenshots/tests.png)
 
 ### Test Coverage
 ![Test Coverage](./screenshots/coverage.png)
