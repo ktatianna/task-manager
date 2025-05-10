@@ -1,0 +1,30 @@
+.list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 400px;
+}
+
+.emptyMessage {
+  color: #6b7280;
+  font-size: 18px;
+  margin: 32px 0;
+  text-align: center;
+}
+
+.clearCompletedBtn {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  color: #7c3aed;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.clearCompletedBtn:hover {
+  background: #ededed;
+  color: #5b21b6;
+  border-color: #5b21b6;
+}

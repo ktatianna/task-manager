@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskForm should match the snapshot 1`] = `
+<div>
+  <form
+    class="form"
+  >
+    <input
+      aria-label="Add a new task"
+      class="input"
+      placeholder="Add a new task"
+      type="text"
+      value=""
+    />
+    <button
+      class="button"
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+</div>
+`;
