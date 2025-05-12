@@ -23,8 +23,17 @@
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
+
 .clearCompletedBtn:hover {
   background: #ededed;
   color: #5b21b6;
   border-color: #5b21b6;
+}
+
+.loading {
+  width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  color: #7c3aed;
+  letter-spacing: 0.5px;
 }

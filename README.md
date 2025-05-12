@@ -1,6 +1,6 @@
 # Task Manager App
 
-A task management module built with **React** (Next.js + TypeScript) that allows users to add, list, mark as completed, and delete tasks. It features state management with Zustand, and unit tests
+A task management module built with **React** (Next.js + TypeScript) that allows users to add, list, mark as completed, and delete tasks. It features state management with Zustand, localStorage persistence, and unit tests
 
 ---
 
@@ -12,6 +12,7 @@ This project is a task management module where you can:
 - Mark tasks as completed.
 - Delete individual tasks or all completed tasks.
 - See an illustrated empty state when there are no tasks.
+- Persist your tasks in the browser using localStorage
 
 ---
 
@@ -19,6 +20,7 @@ This project is a task management module where you can:
 
 - **Framework:** [Next.js](https://nextjs.org/) (React + TypeScript)
 - **State Management:** [Zustand](https://zustand-demo.pmnd.rs/)
+- **Persistence:** localStorage integration
 - **Styling:** CSS Modules for encapsulation and consistency.
 - **Testing:** [Jest](https://jestjs.io/) + [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
 - **Modularization:** Small, reusable components (`TaskForm`, `TaskList`, `TaskItem`, `EmptyState`).
@@ -60,6 +62,7 @@ This project is a task management module where you can:
   - Deleting tasks
   - Marking as completed
   - UI rendering and empty state
+  - localStorage utilities (save/load)
 - All tests pass successfully (`npm run test`).
 
 ---
@@ -75,21 +78,22 @@ npm run test -- --coverage
 Sample summary:
 
 ```
-------------------|---------|----------|---------|---------|-------------------
-File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------------|---------|----------|---------|---------|-------------------
-All files         |   98.46 |      100 |   96.29 |     100 |                   
- ...nts/NoResults |     100 |      100 |     100 |     100 |                   
-  index.tsx       |     100 |      100 |     100 |     100 |                   
- ...ents/TaskForm |   93.75 |      100 |      75 |     100 |                   
-  index.tsx       |   93.75 |      100 |      75 |     100 |                   
- ...ents/TaskItem |     100 |      100 |     100 |     100 |                   
-  index.tsx       |     100 |      100 |     100 |     100 |                   
- ...ents/TaskList |     100 |      100 |     100 |     100 |                   
-  index.tsx       |     100 |      100 |     100 |     100 |                   
- store            |     100 |      100 |     100 |     100 |                   
-  useTaskStore.ts |     100 |      100 |     100 |     100 |                   
-------------------|---------|----------|---------|---------|-------------------
+-----------------------|---------|----------|---------|---------|
+File                   | % Stmts | % Branch | % Funcs | % Lines |
+-----------------------|---------|----------|---------|---------|
+All files              |   97.89 |      100 |   93.75 |   98.73 |
+ components/EmptyState |     100 |      100 |     100 |     100 |
+  index.tsx            |     100 |      100 |     100 |     100 |
+ components/TaskForm   |   93.75 |      100 |      75 |     100 |
+  index.tsx            |   93.75 |      100 |      75 |     100 |
+ components/TaskItem   |     100 |      100 |     100 |     100 |
+  index.tsx            |     100 |      100 |     100 |     100 |
+ components/TaskList   |     100 |      100 |     100 |     100 |
+  index.tsx            |     100 |      100 |     100 |     100 |
+ store                 |   96.15 |      100 |    92.3 |   95.45 |
+  useTaskStore.ts      |   96.15 |      100 |    92.3 |   95.45 |
+ utils                 |     100 |      100 |     100 |     100 |
+  storage.ts           |     100 |      100 |     100 |     100 |
 ```
 
 ## 🖼️ Screenshots

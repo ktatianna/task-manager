@@ -2,11 +2,6 @@
 
 exports[`TaskList should match the snapshot 1`] = `
 <div>
-  <button
-    class="clearCompletedBtn"
-  >
-    Delete completed tasks
-  </button>
   <ul
     class="list"
   >
@@ -120,5 +115,10 @@ exports[`TaskList should match the snapshot 1`] = `
       </button>
     </li>
   </ul>
+  <button
+    class="clearCompletedBtn"
+  >
+    Delete completed tasks
+  </button>
 </div>
 `;

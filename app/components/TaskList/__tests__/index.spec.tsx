@@ -1,5 +1,5 @@
-import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event';
+import "@testing-library/jest-dom";
+import userEvent from "@testing-library/user-event";
 import { render, screen } from "@testing-library/react";
 import TaskList from "../index";
 import { useTaskStore } from "@/app/store/useTaskStore";
@@ -13,9 +13,16 @@ const defaultTasks = [
   { id: "2", description: "Hacer ejercicio", completed: true },
 ];
 
-const setup = (tasksOverride = defaultTasks, clearCompletedMock = jest.fn()) => {
+const setup = (
+  tasksOverride = defaultTasks,
+  clearCompletedMock = jest.fn()
+) => {
   (useTaskStore as unknown as jest.Mock).mockImplementation((selector) =>
-    selector({ tasks: tasksOverride, clearCompleted: clearCompletedMock })
+    selector({
+      tasks: tasksOverride,
+      setTasks: jest.fn(),
+      clearCompleted: clearCompletedMock,
+    })
   );
   return render(<TaskList />);
 };
@@ -46,7 +53,9 @@ describe("TaskList", () => {
     const clearCompletedMock = jest.fn();
     setup(defaultTasks, clearCompletedMock);
 
-    const button = screen.getByRole("button", { name: "Delete completed tasks" });
+    const button = screen.getByRole("button", {
+      name: "Delete completed tasks",
+    });
     await userEvent.click(button);
     expect(clearCompletedMock).toHaveBeenCalled();
   });
